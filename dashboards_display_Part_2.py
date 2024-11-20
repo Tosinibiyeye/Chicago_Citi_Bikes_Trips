@@ -5,10 +5,10 @@ import numpy as np
 from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 import matplotlib.pyplot as plt
-#from streamlit_keplergl import keplergl_static
+from streamlit_keplergl import keplergl_static
 from keplergl import KeplerGl
 from datetime import datetime as dt
-#from numerize.numerize import numerize
+from numerize.numerize import numerize
 from PIL import Image
 ########################### Initial settings for the dashboard ##################################################################
 st.set_page_config(
@@ -27,7 +27,7 @@ page = st.sidebar.selectbox('Select an aspect of the analysis',
 
 ########################## Import data ###########################################################################################
 
-df = pd.read_csv('reduced_data_to_plot.csv', index_col = 0)
+df = pd.read_csv('reduced_data_to_plot_2.gz', index_col = 0)
 top_20_stations = pd.read_csv('top_20_stations.csv', index_col = 0)
 
 
